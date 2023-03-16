@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Iso&family=Ubuntu:ital,wght@0,300;0,500;0,700;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,500;0,700;1,300&display=swap');
 * {
     padding: 0;
     margin: 0;
@@ -21,6 +21,7 @@
 ----------------------font family-----------------------------
 font-family: 'Rubik Iso', cursive;
 font-family: 'Ubuntu Mono', monospace;
+font-family: 'Ubuntu', sans-serif;
 */
 
 
@@ -84,8 +85,7 @@ main {
 .homeImg img {
     width: 30vw;
     object-fit: cover;
-    filter: brightness(30%);
-    transition: transform .5s ease-in-out;
+    filter: brightness(50%);
 }
 
 .homeText h3 {
@@ -107,10 +107,15 @@ section {
     margin: 5rem 0;
 }
 
-.about img {
+
+/* .about img {
     width: 30vw;
     filter: opacity(5%);
 }
+
+.about img:hover {
+    transform: scale(1.1);
+    /* box-shadow: 0 0 100px var(--main-color); }*/
 
 .about {
     display: flex;
@@ -152,13 +157,24 @@ section {
 .service {
     width: 90%;
     padding: 2rem;
-    background-color: var(--bg-color-2);
+    background: var(--font-color-2);
     margin: 1rem;
     border-radius: 1rem;
     /* align-items: center; */
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
+    transition: .8s ease;
+    color: black;
+}
+
+.service:hover {
+    /* border: 4px solid var(--main-color); */
+    box-shadow: 0 0 1000px 100px var(--main-color);
+    z-index: 1;
+    transform: scale(1.1);
+    color: var(--main-color);
+    background: transparent;
 }
 
 .service h3 {
@@ -180,4 +196,82 @@ section {
 .services-tag h2 {
     font-size: 4vw;
     text-align: center;
+}
+
+.portfolio {}
+
+.portfolio h3 {
+    font-size: 2.5vw;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.portfolio-img {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.portfolio img {
+    width: 25%;
+    margin: 1rem;
+    border-radius: .8rem;
+    object-fit: cover;
+    transition: 1s ease;
+}
+
+.portfolio img:hover {
+    border: 4px solid var(--main-color);
+    box-shadow: 0 0 1000px 100px var(--main-color);
+    z-index: 1;
+    transform: scale(1.1);
+    color: var(--main-color);
+}
+
+.img-layer {
+    position: absolute;
+    left: 20rem;
+    top: 5rem;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact form label {
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+.contact form input {
+    padding: 1rem;
+    font-size: 1.5rem;
+    width: 80%;
+    margin: 1rem;
+    background-color: var(--bg-color-2);
+    color: white;
+    outline: none;
+    border: none;
+}
+
+.contact form textarea {
+    width: 80%;
+    background-color: var(--bg-color-2);
+    font-size: 1.6rem;
+    color: white;
+    padding: 1rem;
+}
+
+#submit {
+    padding: 1rem;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: .8rem;
 }
